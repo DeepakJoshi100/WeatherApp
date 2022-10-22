@@ -17,65 +17,67 @@ function WeatherRow({ weather, query }) {
           ) : (
             <>
               <div className="mx-auto font-mono">
-                <div className="flex gap-2 text-black font-black">
+                <div className="flex gap-2 font-black text-black">
                   <div>City Name: </div>{" "}
-                  <div className="text-red-700 font-bold">{query}</div>
+                  <div className="font-bold text-red-700">
+                    {query.charAt(0).toUpperCase() + query.slice(1)}
+                  </div>
                 </div>
-                <div className="flex font-bold text-black gap-2">
+                <div className="flex gap-2 font-bold text-black">
                   <div>Temperature: </div>
-                  <div className="text-red-500 font-semibold">
-                    {weather.temp - 273.15} °C
+                  <div className="font-semibold text-red-500">
+                    {(weather.temp - 273.15).toFixed(2)} °C
                   </div>
                 </div>
-                <div className="flex font-bold text-black gap-2">
+                <div className="flex gap-2 font-bold text-black">
                   <div>Feels Like: </div>
-                  <div className="text-red-500 font-semibold">
-                    {weather.feels_like - 273.15} °C
+                  <div className="font-semibold text-red-500">
+                    {(weather.feels_like - 273.15).toFixed(2)} °C
                   </div>
                 </div>
-                <div className="flex font-bold text-black gap-2">
+                <div className="flex gap-2 font-bold text-black">
                   <div>Minimun Temperature: </div>
-                  <div className="text-red-500 font-semibold">
-                    {weather.temp_min - 273.15} °C
+                  <div className="font-semibold text-red-500">
+                    {(weather.temp_min - 273.15).toFixed(2)} °C
                   </div>
                 </div>
-                <div className="flex font-bold text-black gap-2">
+                <div className="flex gap-2 font-bold text-black">
                   <div>Maximum Temperature: </div>
-                  <div className="text-red-500 font-semibold">
-                    {weather.temp_max - 273.15} °C
+                  <div className="font-semibold text-red-500">
+                    {(weather.temp_max - 273.15).toFixed(2)} °C
                   </div>
                 </div>
-                <div className="flex font-bold text-black gap-2">
+                <div className="flex gap-2 font-bold text-black">
                   <div>Pressure: </div>
-                  <div className="text-red-500 font-semibold">
-                    {(weather.pressure * 100) / 6894.76} Psi
+                  <div className="font-semibold text-red-500">
+                    {((weather.pressure * 100) / 6894.76).toFixed(2)} Psi
                   </div>
                 </div>
-                <div className="flex font-bold text-black gap-2">
+                <div className="flex gap-2 font-bold text-black">
                   <div>Humidity: </div>
-                  <div className="text-red-500 font-semibold">
+                  <div className="font-semibold text-red-500">
                     {weather.humidity} %
                   </div>
                 </div>
                 {weather.grnd_level > 0 && (
-                  <div className="flex font-bold text-black gap-2">
+                  <div className="flex gap-2 font-bold text-black">
                     <div>Ground Level: </div>
-                    <div className="text-red-500 font-semibold">
+                    <div className="font-semibold text-red-500">
                       {weather.grnd_level} m
                     </div>
                   </div>
                 )}
                 {weather.sea_level > 0 && (
-                  <div className="flex font-bold text-black gap-2">
+                  <div className="flex gap-2 font-bold text-black">
                     <div>Sea Level: </div>
-                    <div className="text-red-500 font-semibold">
+                    <div className="font-semibold text-red-500">
                       {weather.sea_level} m
                     </div>
                   </div>
                 )}
                 <div className="flex items-center justify-center gap-2 my-10 font-black">
                   Enjoy Your's Lovely
-                  <span className="text-3xl  flex items-center text-red-600 animate-pulse">
+                  <span className="flex items-center text-3xl text-red-600 animate-pulse">
                     ❤
                   </span>
                   Day
