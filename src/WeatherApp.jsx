@@ -16,7 +16,7 @@ function WeatherApp() {
         APPID: "8ab263e745b75e176585cff1e2076f9b",
       };
       axios
-        .get("http://api.openweathermap.org/data/2.5/weather", { params: p })
+        .get("https://api.openweathermap.org/data/2.5/weather", { params: p })
         .then((wea) => {
           setWeather(wea.data.main);
           setLoading(false);
