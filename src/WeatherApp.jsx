@@ -31,10 +31,10 @@ function WeatherApp() {
 
   return (
     <>
-      <div className="w-full bg-gray-100 h-full max-w-2xl mx-auto">
-        <div className="flex gap-2 items-center justify-center m-2">
+      <div className="w-full h-full max-w-2xl py-4 mx-auto my-2 bg-gray-100 rounded-md ">
+        <div className="flex items-center justify-center gap-2 m-2">
           <input
-            className="w-full border-4 border-blue-200 outline-none focus:border-blue-400 rounded-full p-2 font-semibold"
+            className="w-full p-2 font-semibold border-4 border-blue-200 rounded-full outline-none focus:border-blue-400"
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Type a city"
           />
